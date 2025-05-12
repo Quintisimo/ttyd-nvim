@@ -1,0 +1,10 @@
+services:
+  ttyd-nvim:
+    build: .
+    container_name: ttyd-nvim
+    ports:
+      - "7681:7681"
+    volumes:
+      - ./:/configs
+    environment:
+      - CONFIG_DIR=/configs
